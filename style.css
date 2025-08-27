@@ -691,6 +691,8 @@ a {
 }
 
  .download-excel-btn {
+    margin-left: 120px;
+    margin-right: 120px;
     margin-top: 2px;
      margin-bottom: 2px;
     padding: 2px;
