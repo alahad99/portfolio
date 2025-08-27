@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //excel
-  function downloadExcel() {
-    window.location.href = 'img/admission.xlsx'; 
+  function downloadExcel(file) {
+    window.location.href = file;
   }
 
 //skill
