@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Portfolio.</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>ABDULLAH AL AHAD</h1>
+      <h2>I'm a <span class="highlight" id="typed-text"></span></h2>
+      <p>
+        I am a creative, hardworking, and adaptable individual with a passion for technology and innovation. I excel in problem-solving and thrive in environments that challenge me to grow and deliver results.
+      </p>
+      <div class="buttons">
+        <a href="img/cv.pdf" class="btn" download="My-CV.pdf">Download CV</a>
+        <div class="socials">
+          <a href="https://wa.me/8801737795035" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alahad99" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+       <!--   <a href="#"><i class="fab fa-linkedin"></i></a> -->
+
+         <!--   <a href="#"><i class="fab fa-youtube"></i></a>--> 
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <img src="img/profile.jpg" alt="profile_image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+With strong knowledge in hardware, networking, cybersecurity, and digital marketing, along with proficiency in Blender, Photoshop, Premiere Pro, and bilingual communication skills, I’m confident in contributing to tech-related fields.
+
+My technical foundation (including CCNA basics, system assembly, and troubleshooting), combined with a growth mindset and eagerness to learn, allows me to work both independently and collaboratively to add value to any organization.
+
+ Working with graphics and cybersecurity in the computer sector is one of my greatest passions. I enjoy learning new things every day, especially exploring and practicing advanced and modern topics in graphic design and cybersecurity.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2 class="section-title">My Works</h2>
+    <div class="portfolio-grid">
+      <div class="card"> <video src="videos/Cycle Donut.mp4" controls poster="img/donut.png"></video><h3>3D model Donut</h3></div>
+      <div class="card"><video src="videos/animaton.mp4" controls muted poster="img/0001.png"></video><h3>3D Animation</h3></div>
+      <div class="card"><img src="img/panda.png" alt="project"><h3>Charecter Modeling</h3></div>
+      <div class="card"><img src="img/store.webp" alt="project"><h4>Previously worked on Shopify theme design, store design and product listing</h6></div>
+      <div class="card"><img src="img/excel.png" alt="project"><h4>Data Cleaning & Formatting</h4>
+        <div class="download-excel-btn" onclick="downloadExcel()">Download .xlsx file</div>
+      </div>
+  <!--    <div class="card"><img src="img/store1.png" alt="project"><h3>Charecter Modeling</h3></div> -->
+    </div>
+  </section>
+
+
+
+  <!--- skill section -->
+<section id="skill" class="skill">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+    <!-- Design Tools Column -->
+    <div class="skills-column">
+      <h3 class="skill-subtitle">Design Tools</h3>
+      <div class="skills-grid">
+        <div class="service-box"><i class="fas fa-paint-brush"></i><h3>Photoshop</h3></div>
+        <div class="service-box"><i class="fas fa-film"></i><h3>Premiere Pro</h3></div>
+        <div class="service-box"><i class="fas fa-magic"></i><h3>After Effects</h3></div>
+        <div class="service-box"><i class="fas fa-cube"></i><h3>Blender</h3></div>
+        <div class="service-box"><i class="fas fa-pen-nib"></i><h3>Illustrator</h3></div>
+      </div>
+    </div>
+
+    <!-- Programming Languages Column -->
+    <div class="skills-column">
+      <h3 class="skill-subtitle">Programming</h3>
+      <div class="skills-grid">
+        <div class="service-box"><i class="fab fa-html5"></i><h3>HTML</h3></div>
+        <div class="service-box"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
+        <div class="service-box"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+        <div class="service-box"><i class="fab fa-python"></i><h3>Python</h3></div>
+        <div class="service-box"><i class="fab fa-java"></i><h3>Java</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+      <div class="service-box"><i class="fas fa-cube"></i><h3>3D Animator</h3></div>
+      <div class="service-box"><i class="fas fa-video"></i><h3>Video Editor</h3></div>
+      <div class="service-box"><i class="fas fa-shield-alt"></i><h3>Cyber Security</h3></div>
+      <div class="service-box"><i class="fas fa-code"></i><h3>Web Design</h3></div>
+      <div class="service-box"><i class="fas fa-bullhorn"></i><h3>Marketing</h3></div>
+     
+      
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+<form action="https://formspree.io/f/mwpqdlrl" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <!-- Anti-spam honeypot -->
+  <input type="text" name="_gotcha" style="display:none">
+  
+  <!-- reCAPTCHA enabled -->
+  <input type="hidden" name="_captcha" value="true">
+
+  <button type="submit" class="btn">Send</button>
+</form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Portfolio. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
