@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar -->
+
   <header>
     <nav class="navbar">
       <div class="logo">Portfolio.</div>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Service</a></li>
         <li><a href="#skill">Skill</a></li>
+        <li><a href="#portfolio">Project</a></li>
+        <li><a href="#services">Certificate</a></li>
+        <li><a href="#blog">Blogs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -30,18 +32,20 @@
       <h1>ABDULLAH AL AHAD</h1>
       <h2>I'm a <span class="highlight" id="typed-text"></span></h2>
       <p>
-        I am a creative, hardworking, and adaptable individual with a passion for technology and innovation. I excel in problem-solving and thrive in environments that challenge me to grow and deliver results.
+        With strong skills in penetration testing, vulnerability research, and<br> graphics design tools.
+        <br>
+        Passionate about digital rights and continuous learning.
       </p>
       <div class="buttons">
         <a href="img/cv.pdf" class="btn" download="My-CV.pdf">Download CV</a>
-        <div class="socials">
-          <a href="https://wa.me/8801737795035" target="_blank" rel="noopener noreferrer"> <i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/alahad99" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-       <!--   <a href="#"><i class="fab fa-linkedin"></i></a> -->
-
-         <!--   <a href="#"><i class="fab fa-youtube"></i></a>--> 
-        </div>
       </div>
+
+        <div class="socials">
+          <a href="https://wa.me/8801737795035" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alahad99" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+      
     </div>
     <div class="hero-image">
       <div class="circle circle1"></div>
@@ -54,101 +58,162 @@
   <section id="about" class="about">
     <h2 class="section-title">About Me</h2>
     <p>
-With strong knowledge in hardware, networking, cybersecurity, and digital marketing, along with proficiency in Blender, Photoshop, Premiere Pro, and bilingual communication skills, I’m confident in contributing to tech-related fields.
-
-My technical foundation (including CCNA basics, system assembly, and troubleshooting), combined with a growth mindset and eagerness to learn, allows me to work both independently and collaboratively to add value to any organization.
-
- Working with graphics and cybersecurity in the computer sector is one of my greatest passions. I enjoy learning new things every day, especially exploring and practicing advanced and modern topics in graphic design and cybersecurity.
+       I am a creative, hardworking, and adaptable individual with a passion for technology and innovation. I excel in problem-solving and thrive in environments that challenge me to grow and deliver results.
+       <br>
+      With strong knowledge in hardware, networking, cybersecurity, and digital marketing, along with proficiency in Blender, Photoshop, Premiere Pro, and bilingual communication skills, I'm confident in contributing to tech-related fields.
+      <br>
+      My technical foundation (including CCNA basics, system assembly, and troubleshooting), combined with a growth mindset and eagerness to learn, allows me to work both independently and collaboratively to add value to any organization.
+      <br>
+      Working with graphics and cybersecurity in the computer sector is one of my greatest passions. I enjoy learning new things every day, especially exploring and practicing advanced and modern topics in graphic design and cybersecurity.
     </p>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio">
-    <h2 class="section-title">My Works</h2>
-    <div class="portfolio-grid">
-      <div class="card"> <video src="videos/Cycle Donut.mp4" controls poster="img/donut.png"></video><h3>3D model Donut</h3></div>
-      <div class="card"><video src="videos/animaton.mp4" controls muted poster="img/0001.png"></video><h3>3D Animation</h3></div>
-      <div class="card"><img src="img/panda.png" alt="project"><h3>Charecter Modeling</h3></div>
-      <div class="card"><img src="img/store.webp" alt="project"><h4>Previously worked on Shopify theme design, store design and product listing</h6></div>
+  <!-- Skill Section -->
+  <section id="skill" class="skill">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <!-- Security Tools -->
+      <div class="skills-column security-tools">
+        <h3 class="skill-subtitle">Security Tools</h3>
+        <div class="skills-grid">
+          <div class="service-box">
+            <img src="security/kali.jpeg" alt="Kali Linux" class="tool-logo">
+           
+          </div>
+          <div class="service-box">
+            <img src="security/nmap.jpeg" alt="Nmap" class="tool-logo">
+          
+          </div>
+          <div class="service-box"><img src="security/burpsuite.jpeg" alt="Burp Suite" class="tool-logo"></div>
+          <div class="service-box"><img src="security/metasploit.jpeg" alt="Metasploit" class="tool-logo"></div>
+          <div class="service-box"><img src="security/wireshark.png" alt="Wireshark" class="tool-logo"></div>
+          <div class="service-box"><img src="security/john.png" alt="John the Ripper" class="tool-logo"></div>
+          <div class="service-box"><img src="security/sqlmap.png" alt="SQLmap" class="tool-logo"></div>
+          <div class="service-box"><img src="security/hashcat.jpeg" alt="Hashcat" class="tool-logo"></div>
+        </div>
+      </div>
 
-        <div class="card"><img src="img/excel.png" alt="project"><h4>Data Cleaning & Formatting</h4>
-          <div class="download-excel-btn" onclick="downloadExcel('img/admission.xlsx')">Download .xlsx</div>
+      <!-- Design + Programming Row -->
+      <div class="skills-row">
+        <!-- Design Tools -->
+        <div class="skills-column design-tools">
+          <h3 class="skill-subtitle">Design Tools</h3>
+          <div class="skills-grid">
+            <div class="service-box"><i class="fas fa-paint-brush"></i><h3>Photoshop</h3></div>
+            <div class="service-box"><i class="fas fa-film"></i><h3>Premiere Pro</h3></div>
+            <div class="service-box"><i class="fas fa-magic"></i><h3>After Effects</h3></div>
+            <div class="service-box"><i class="fas fa-cube"></i><h3>Blender</h3></div>
+            <div class="service-box"><i class="fas fa-pen-nib"></i><h3>Illustrator</h3></div>
+          </div>
         </div>
 
-        <div class="card"><img src="img/mark.png" alt="project"><h3>Data Analysis</h3>
-          <div class="download-excel-btn" onclick="downloadExcel('img/mark.xlsx')">Download .xlsx</div>
+        <!-- Programming Languages -->
+        <div class="skills-column programming-languages">
+          <h3 class="skill-subtitle">Programming Languages</h3>
+          <div class="skills-grid">
+            <div class="service-box"><i class="fab fa-html5"></i><h3>HTML</h3></div>
+            <div class="service-box"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
+            <div class="service-box"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+            <div class="service-box"><i class="fab fa-python"></i><h3>Python</h3></div>
+            <div class="service-box"><i class="fab fa-java"></i><h3>Java</h3></div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
 
-
-  <!--- skill section -->
-<section id="skill" class="skill">
-  <h2 class="section-title">My Skills</h2>
-  <div class="skills-container">
-    <!-- Design Tools Column -->
-    <div class="skills-column">
-      <h3 class="skill-subtitle">Design Tools</h3>
-      <div class="skills-grid">
-        <div class="service-box"><i class="fas fa-paint-brush"></i><h3>Photoshop</h3></div>
-        <div class="service-box"><i class="fas fa-film"></i><h3>Premiere Pro</h3></div>
-        <div class="service-box"><i class="fas fa-magic"></i><h3>After Effects</h3></div>
-        <div class="service-box"><i class="fas fa-cube"></i><h3>Blender</h3></div>
-        <div class="service-box"><i class="fas fa-pen-nib"></i><h3>Illustrator</h3></div>
-      </div>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h2 class="section-title">My Project</h2>
+  <div class="portfolio-filter">
+    <button class="filter-btn active" data-filter="graphics">Graphics Projects</button>
+        <span class="arrow-icon"><i id="arrow-icon" class="fas fa-arrow-left"></i></span>
+    <button class="filter-btn" data-filter="cyber">Cyber Projects</button>
+  </div>
+  <div class="portfolio-grid">
+    <div class="card" data-category="graphics">
+      <video src="videos/Cycle Donut.mp4" controls poster="img/donut.png"></video>
+      <h3>3D model Donut</h3>
+    </div>
+    <div class="card" data-category="graphics">
+      <video src="videos/animaton.mp4" controls muted poster="img/0001.png"></video>
+      <h3>3D Animation</h3>
+    </div>
+    <div class="card" data-category="graphics">
+      <img src="img/panda.png" alt="project">
+      <h3>Character Modeling</h3>
     </div>
 
-    <!-- Programming Languages Column -->
-    <div class="skills-column">
-      <h3 class="skill-subtitle">Programming</h3>
-      <div class="skills-grid">
-        <div class="service-box"><i class="fab fa-html5"></i><h3>HTML</h3></div>
-        <div class="service-box"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
-        <div class="service-box"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
-        <div class="service-box"><i class="fab fa-python"></i><h3>Python</h3></div>
-        <div class="service-box"><i class="fab fa-java"></i><h3>Java</h3></div>
+      <!-- <<================CYBER PROJECT=======================>>    -->
+
+      <div class="card" data-category="cyber">
+        <a href="https://github.com/alahad99/phising" target="_blank">
+          <img src="img/phising.png" alt="project">
+          <h4>Google Account Phishing Page</h4>
+        </a>
       </div>
-    </div>
+
+    <!-- <div class="card" data-category="cyber">
+      <img src="img/mark.png" alt="project">
+      <h4>Data Analysis</h4>
+      <div class="download-excel-btn" onclick="downloadExcel('img/mark.xlsx')">Download .xlsx</div>
+    </div> -->
   </div>
 </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2 class="section-title">Services</h2>
-    <div class="services-grid">
-      <div class="service-box"><i class="fas fa-cube"></i><h3>3D Animator</h3></div>
-      <div class="service-box"><i class="fas fa-video"></i><h3>Video Editor</h3></div>
-      <div class="service-box"><i class="fas fa-shield-alt"></i><h3>Cyber Security</h3></div>
-      <div class="service-box"><i class="fas fa-code"></i><h3>Web Design</h3></div>
-      <div class="service-box"><i class="fas fa-bullhorn"></i><h3>Marketing</h3></div>
-     
-      
-    </div>
-  </section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <h2 class="section-title">Certificate of Completion</h2>
+  <div class="services-grid">
+
+    <a href="https://tryhackme.com/certificate/THM-JD5VEJYMZH" target="_blank" class="service-box">
+      <img src="security/tester.png" alt="Jr Penetration Tester" class="certificate-img">
+    </a>
+
+    <a href="https://tryhackme.com/certificate/THM-QIEIZJJHRQ" target="_blank" class="service-box">
+      <img src="security/web.png" alt="Web Fundamentals" class="certificate-img">
+    </a>
+
+  </div>
+</section>
+
+
+<!-- Blog Section -->
+<!-- <section id="blog" class="blog">
+  <h2 class="section-title">My Blogs</h2>
+  <div class="blog-list">
+    <a href="https://medium.com/@yourusername" target="_blank" class="blog-card">
+      <img src="img/excel.png" alt="Medium Blog" class="blog-img">
+      <h3>Medium Blog</h3>
+    </a>
+
+    <a href="https://yourblogsite.com" target="_blank" class="blog-card">
+      <img src="img/excel.png" alt="Personal Blog" class="blog-img">
+      <h3>Personal Blog Website</h3>
+    </a>
+  </div>
+</section> -->
+
   
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2 class="section-title">Contact Me</h2>
-<form action="https://formspree.io/f/mwpqdlrl" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-
-  <!-- Anti-spam honeypot -->
-  <input type="text" name="_gotcha" style="display:none">
-  
-  <!-- reCAPTCHA enabled -->
-  <input type="hidden" name="_captcha" value="true">
-
-  <button type="submit" class="btn">Send</button>
-</form>
-
+    <form action="https://formspree.io/f/mwpqdlrl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_captcha" value="true">
+      <button type="submit" class="btn">Send</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <p>© 2025 Portfolio. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
+
