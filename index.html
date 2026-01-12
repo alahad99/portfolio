@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">ABDULLAH AL AHAD</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#portfolio">Project</a></li>
+        <li><a href="#services">Certificate</a></li>
+        <li><a href="#blog">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>ABDULLAH AL AHAD</h1>
+      <h2>I'm a <span class="highlight" id="typed-text"></span></h2>
+      <p>
+        With strong skills in penetration testing, vulnerability research, and<br> graphics design tools.
+        <br>
+        Passionate about digital rights and continuous learning.
+      </p>
+      <div class="buttons">
+        <a href="img/cv.pdf" class="btn" download="ABDULLAH AL AHAD.pdf">Download CV</a>
+      </div>
+
+        <div class="socials">
+          <a href="https://wa.me/8801737795035" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alahad99" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a> 
+        </div>
+      
+    </div>
+    <div class="hero-image">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <img src="img/profile.jpg" alt="profile_image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+       I am a creative, hardworking, and adaptable individual with a passion for technology and innovation. I excel in problem-solving and thrive in environments that challenge me to grow and deliver results.
+       <br>
+      With strong knowledge in hardware, networking, cybersecurity, and digital marketing, along with proficiency in Blender, Photoshop, Premiere Pro, and bilingual communication skills, I'm confident in contributing to tech-related fields.
+      <br>
+      My technical foundation (including CCNA basics, system assembly, and troubleshooting), combined with a growth mindset and eagerness to learn, allows me to work both independently and collaboratively to add value to any organization.
+      <br>
+      Working with graphics and cybersecurity in the computer sector is one of my greatest passions. I enjoy learning new things every day, especially exploring and practicing advanced and modern topics in graphic design and cybersecurity.
+    </p>
+  </section>
+
+  <!-- Skill Section -->
+  <section id="skill" class="skill">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <!-- Security Tools -->
+      <div class="skills-column security-tools">
+        <h3 class="skill-subtitle">Security Tools</h3>
+        <div class="skills-grid">
+          <div class="service-box">
+            <img src="security/kali.jpeg" alt="Kali Linux" class="tool-logo">
+           
+          </div>
+          <div class="service-box">
+            <img src="security/nmap.jpeg" alt="Nmap" class="tool-logo">
+          
+          </div>
+          <div class="service-box"><img src="security/burpsuite.jpeg" alt="Burp Suite" class="tool-logo"></div>
+          <div class="service-box"><img src="security/metasploit.jpeg" alt="Metasploit" class="tool-logo"></div>
+          <div class="service-box"><img src="security/wireshark.png" alt="Wireshark" class="tool-logo"></div>
+          <div class="service-box"><img src="security/john.png" alt="John the Ripper" class="tool-logo"></div>
+          <div class="service-box"><img src="security/sqlmap.png" alt="SQLmap" class="tool-logo"></div>
+          <div class="service-box"><img src="security/hashcat.jpeg" alt="Hashcat" class="tool-logo"></div>
+        </div>
+      </div>
+
+      <!-- Design + Programming Row -->
+      <div class="skills-row">
+        <!-- Design Tools -->
+        <div class="skills-column design-tools">
+          <h3 class="skill-subtitle">High skill Design Tools</h3>
+          <div class="skills-grid">
+            <div class="service-box"><i class="fas fa-paint-brush"></i><h3>Photoshop</h3></div>
+            <div class="service-box"><i class="fas fa-film"></i><h3>Premiere Pro</h3></div>
+            <div class="service-box"><i class="fas fa-magic"></i><h3>After Effects</h3></div>
+            <div class="service-box"><i class="fas fa-cube"></i><h3>Blender</h3></div>
+            <div class="service-box"><i class="fas fa-pen-nib"></i><h3>Illustrator</h3></div>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skills-column programming-languages">
+          <h3 class="skill-subtitle">Basic Programming Languages</h3>
+          <div class="skills-grid">
+            <div class="service-box"><i class="fab fa-html5"></i><h3>HTML</h3></div>
+            <div class="service-box"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
+            <div class="service-box"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+            <div class="service-box"><i class="fab fa-python"></i><h3>Python</h3></div>
+            <div class="service-box"><i class="fab fa-java"></i><h3>Java</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- <<<<<<<<   Portfolio Section   >>>>>>>>>>> -->
+<section id="portfolio" class="portfolio">
+  <h2 class="section-title">My Project</h2>
+
+  <div class="portfolio-filter">
+    <button class="filter-btn active" data-filter="graphics">Graphics Projects</button>
+    <span class="arrow-icon"><i id="arrow-icon" class="fas fa-arrow-left"></i></span>
+    <button class="filter-btn" data-filter="cyber">Cyber Projects</button>
+  </div>
+
+  <div id="portfolio-wrapper">
+
+    <!-- GRAPHICS SECTION -->
+    <div id="graphics-section" class="portfolio-section">
+      <div class="portfolio-grid">
+
+        <!-- GRAPHICS CARD-1 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="img/donut/donut.png" class="main-preview" />
+            <img src="img/donut/donut1.png" class="extra" style="display:none;">
+            <img src="img/donut/donut2.png" class="extra" style="display:none;">
+            <img src="img/donut/donut3.png" class="extra" style="display:none;">
+            <img src="img/donut/donut4.png" class="extra" style="display:none;">
+            <video src="img/donut/Cycle Donut.mp4" class="extra" style="display:none;"></video>
+          </div>
+          <h3>3D Donut Modeling CGI</h3>
+        </div>
+
+        <!-- GRAPHICS CARD-2 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="img/animation/animation.png" class="main-preview" />
+            <img src="img/animation/animation1.png" class="extra" style="display:none;">
+            <img src="img/animation/animation2.png" class="extra" style="display:none;">
+            <img src="img/animation/animation3.png" class="extra" style="display:none;">
+            <img src="img/animation/animation4.png" class="extra" style="display:none;">
+            <video src="img/animation/animaton.mp4" class="extra" style="display:none;"></video>
+          </div>
+          <h3>3D Animation</h3>
+        </div>
+
+        <!-- GRAPHICS CARD-3 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="img/perfume-b/cgi.png" class="main-preview" />
+            <img src="img/perfume-b/cgi0.png" class="extra" style="display:none;">
+            <img src="img/perfume-b/cgi1.png" class="extra" style="display:none;">
+            <img src="img/perfume-b/cgi2.png" class="extra" style="display:none;">
+            <img src="img/perfume-b/cgi3.png" class="extra" style="display:none;">
+            <img src="img/perfume-b/cgi5.png" class="extra" style="display:none;">
+            <img src="img/perfume-b/cgi6.png" class="extra" style="display:none;">
+            <video src="img/perfume-b/cgi.mp4" class="extra" style="display:none;"></video>
+          </div>
+          <h3>Perfume Bottle CGI</h3>
+        </div>
+
+                <!-- GRAPHICS CARD-4 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="img/cube/cubex.png" class="main-preview" />
+            <img src="img/cube/cube.png" class="extra" style="display:none;">
+            <img src="img/cube/cube2.png" class="extra" style="display:none;">
+            <img src="img/cube/cube3.png" class="extra" style="display:none;">
+            <img src="img/cube/cube4.png" class="extra" style="display:none;">
+            <img src="img/cube/cube5.png" class="extra" style="display:none;">
+            <video src="img/cube/cube.mp4" class="extra" style="display:none;"></video>
+          </div>
+          <h3>Cube Animation</h3>
+        </div>
+
+                        <!-- GRAPHICS CARD-5 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="photoshop/Photoshop.png" class="main-preview" />
+            <img src="photoshop/P1.png" class="extra" style="display:none;">
+            <img src="photoshop/P2.png" class="extra" style="display:none;">
+            <img src="photoshop/P3.png" class="extra" style="display:none;">
+            <img src="photoshop/P6.png" class="extra" style="display:none;">
+            <img src="photoshop/P4.png" class="extra" style="display:none;">
+            <img src="photoshop/P5.png" class="extra" style="display:none;">
+          </div>
+          <h3>Social Media Banner</h3>
+        </div>
+
+                        <!-- GRAPHICS CARD-6 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="illustrator/illutrator.jpg" class="main-preview" />
+            <img src="img/cube/cube.png" class="extra" style="display:none;">
+            <img src="img/cube/cube2.png" class="extra" style="display:none;">
+            <img src="img/cube/cube3.png" class="extra" style="display:none;">
+            <img src="img/cube/cube4.png" class="extra" style="display:none;">
+            <img src="img/cube/cube5.png" class="extra" style="display:none;">
+            <video src="img/cube/cube.mp4" class="extra" style="display:none;"></video>
+          </div>
+          <h3>Illustrator Project</h3>
+        </div>
+
+                    <!-- GRAPHICS CARD-7 -->
+        <div class="card" data-category="graphics">
+          <div class="media-box">
+            <img src="premiere pro/premiere pro.jpg" class="main-preview" />
+            <img src="img/cube/cube.png" class="extra" style="display:none;">
+            <img src="img/cube/cube2.png" class="extra" style="display:none;">
+            <img src="img/cube/cube3.png" class="extra" style="display:none;">
+            <img src="img/cube/cube4.png" class="extra" style="display:none;">
+            <img src="img/cube/cube5.png" class="extra" style="display:none;">
+            <img src="img/cube/cube.mp4" class="extra" style="display:none;">
+          </div>
+          <h3>Illustrator Project</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CYBER SECTION -->
+    <div id="cyber-section" class="portfolio-section">
+        <div class="portfolio-grid">
+
+        <div class="card" data-category="cyber">
+          <a href="https://github.com/alahad99/phising" target="_blank">
+            <img src="img/phising.png" alt="project">
+            <h4>Google Account Phishing Page</h4>
+          </a>
+        </div>
+
+        <div class="card" data-category="cyber">
+          <a href="https://password-generator-bq2k.onrender.com/" target="_blank">
+            <img src="img/password_genarator.jpg" alt="project">
+            <h4>Password Generator</h4>
+          </a>
+        </div>
+
+        <div class="card" data-category="cyber">
+          <a href="https://github.com/alahad99/java-project" target="_blank">
+            <img src="img/java.png" alt="project">
+            <h4>Java Bank Management</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <h2 class="section-title">Certificate of Completion</h2>
+  <div class="services-grid">
+
+    <a href="https://tryhackme.com/certificate/THM-JD5VEJYMZH" target="_blank" class="service-box">
+      <img src="security/tester.png" alt="Jr Penetration Tester" class="certificate-img">
+    </a>
+
+    <a href="https://tryhackme.com/certificate/THM-QIEIZJJHRQ" target="_blank" class="service-box">
+      <img src="security/web.png" alt="Web Fundamentals" class="certificate-img">
+    </a>
+
+  </div>
+</section>
+
+
+<!-- Blog Section -->
+  <section id="blog" class="blog">
+  <h2 class="section-title">My Blogs</h2>
+  <div class="blog-list">
+    <a href="https://medium.com/@engineerahad01/cracking-the-owasp-juice-shop-my-story-of-finding-vulnerabilities-b3797fc3eae4?source=friends_link&sk=c3f0fb97de49b8a9087256af6b100ea5" target="_blank" class="blog-card">
+      <img src="img/owasp.png" alt="Medium Blog" class="blog-img">
+      <h3>OWASP juice shop -walkthrough</h3>
+    </a>
+
+   <a href="https://medium.com/@engineerahad01/tryhackme-hammer-64d1628dd74b" target="_blank" class="blog-card">
+      <img src="img/hammer.png" alt="Hammer room" class="blog-img">
+      <h3>Hammer -walkthrough</h3>
+    </a>
+  </div>
+</section> 
+
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://formspree.io/f/mwpqdlrl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_captcha" value="true">
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+
+<!-- FULLSCREEN POPUP -->
+<div id="lightbox" class="lightbox">
+
+    <span class="close-btn">&times;</span>
+
+    <!-- Arrows -->
+    <span class="nav-btn prev-btn">&#10094;</span>
+    <span class="nav-btn next-btn">&#10095;</span>
+
+    <!-- MAIN VIEWER -->
+    <div class="viewer-box">
+      
+      
+        <img id="viewer-img">
+        <video id="viewer-video" controls></video>
+          <span id="video-icon" class="video-icon"></span>
+    </div>
+
+    <!-- THUMBNAIL STRIP -->
+    <div class="thumb-strip" id="thumb-strip"></div>
+
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Portfolio. All Rights Reserved by AHAD.</p>
+  </footer>
+</body>
+</html>
+
