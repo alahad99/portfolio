@@ -67,20 +67,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll(".filter-btn");
   const graphics = document.getElementById("graphics-section");
   const cyber = document.getElementById("cyber-section");
+  const arrow = document.getElementById("arrow-icon");
 
-  // Default Position
+  // ===============================
+  // Default State (Graphics Active)
+  // ===============================
   graphics.classList.add("top", "slide-up");
   cyber.classList.add("bottom", "slide-down");
+  arrow.className = "fas fa-arrow-left";
 
   btns.forEach(btn => {
     btn.addEventListener("click", () => {
 
+      // active button
       btns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
       const filter = btn.dataset.filter;
 
+      // ===============================
+      // GRAPHICS CLICK
+      // ===============================
       if (filter === "graphics") {
+
+        arrow.className = "fas fa-arrow-left";
 
         graphics.classList.add("top", "slide-up");
         graphics.classList.remove("bottom", "slide-down");
@@ -89,7 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
         cyber.classList.remove("top", "slide-up");
       }
 
+      // ===============================
+      // CYBER CLICK
+      // ===============================
       else if (filter === "cyber") {
+
+        arrow.className = "fas fa-arrow-right";
 
         cyber.classList.add("top", "slide-up");
         cyber.classList.remove("bottom", "slide-down");
@@ -102,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 
 
