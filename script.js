@@ -305,14 +305,18 @@ document.querySelectorAll(".media-box").forEach(box => {
 
 // next
 nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % currentItems.length;
-  showItem(currentIndex);
+  if (currentIndex < currentItems.length - 1) {
+    currentIndex++;
+    showItem(currentIndex);
+  }
 });
 
 // prev
 prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
-  showItem(currentIndex);
+  if (currentIndex > 0) {
+    currentIndex--;
+    showItem(currentIndex);
+  }
 });
 
 // close
@@ -345,6 +349,23 @@ function showItem(index) {
     viewerVideo.style.display = "block";
     videoIcon.style.display = "block";
   }
+
+   const thumbs = document.querySelectorAll("#thumb-strip img, #thumb-strip video");
+
+  thumbs.forEach((thumb, i) => {
+    thumb.classList.toggle("active", i === index);
+  });
+
+  // auto scroll slider to active thumb
+  const activeThumb = thumbs[index];
+  if (activeThumb) {
+    activeThumb.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
+
 
   // ===============================
   // FIX: ONLY ONE ACTIVE THUMBNAIL
