@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.getElementById("typed-text");
   if (!textElement) return;
 
-  const words = ["Graphic Designer", "Penetration Tester"];
+  const words = ["3D Artist",
+    "Product Visualization Specialist",
+    "3D Modeler & Renderer",
+    "Lighting & CGI Artist"];
   let wordIndex = 0;
   let charIndex = 0;
 
@@ -123,14 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //video size fix>>>>>>>>>>>>>>>>>>>//
 document.querySelectorAll(".video-wrapper video").forEach(video => {
-    
-    video.addEventListener("play", () => {
-        video.parentElement.classList.add("active");
-    });
 
-    video.addEventListener("ended", () => {
-        video.parentElement.classList.remove("active");
-    });
+  video.addEventListener("play", () => {
+    video.parentElement.classList.add("active");
+  });
+
+  video.addEventListener("ended", () => {
+    video.parentElement.classList.remove("active");
+  });
 
 });
 
@@ -251,13 +254,19 @@ function showItem(index) {
   });
 }
 
-// When clicking a card
+// ==============================
+// When clicking a card (FINAL)
+// ==============================
+
 document.querySelectorAll(".media-box").forEach(box => {
   box.addEventListener("click", () => {
 
     currentItems = [];
     currentIndex = 0;
 
+    // -------------------------
+    // Collect media
+    // -------------------------
     const main = box.querySelector(".main-preview");
     if (main) currentItems.push(main);
 
@@ -265,12 +274,28 @@ document.querySelectorAll(".media-box").forEach(box => {
       currentItems.push(extra);
     });
 
-    // Build thumbnails
+    // -------------------------
+    // LIGHTBOX DESCRIPTION
+    // -------------------------
+    const lightboxDesc = document.getElementById("lightbox-desc");
+    const card = box.closest(".card");
+    const desc = card ? card.querySelector(".project-desc") : null;
 
+    if (lightboxDesc && desc && desc.textContent.trim() !== "") {
+      lightboxDesc.textContent = desc.textContent.trim();
+      lightboxDesc.style.display = "block";
+    } else if (lightboxDesc) {
+      lightboxDesc.textContent = "";
+      lightboxDesc.style.display = "none";
+    }
+
+    // -------------------------
+    // Build thumbnails
+    // -------------------------
     thumbStrip.innerHTML = "";
+
     currentItems.forEach((media, i) => {
 
-      // wrapper for overlay icon  
       const wrapper = document.createElement("div");
       wrapper.style.position = "relative";
       wrapper.style.display = "inline-block";
@@ -286,7 +311,7 @@ document.querySelectorAll(".media-box").forEach(box => {
 
       wrapper.appendChild(t);
 
-      // If video → add video icon
+      // Video badge
       if (media.tagName === "VIDEO") {
         const badge = document.createElement("span");
         badge.classList.add("thumb-video-icon");
@@ -297,11 +322,14 @@ document.querySelectorAll(".media-box").forEach(box => {
       thumbStrip.appendChild(wrapper);
     });
 
-
+    // -------------------------
+    // Show lightbox
+    // -------------------------
     lightbox.style.display = "flex";
     showItem(0);
   });
 });
+
 
 // next
 nextBtn.addEventListener("click", () => {
@@ -343,14 +371,14 @@ function showItem(index) {
   if (item.tagName === "IMG") {
     viewerImg.src = item.src;
     viewerImg.style.display = "block";
-  } 
+  }
   else if (item.tagName === "VIDEO") {
     viewerVideo.src = item.src;
     viewerVideo.style.display = "block";
     videoIcon.style.display = "block";
   }
 
-   const thumbs = document.querySelectorAll("#thumb-strip img, #thumb-strip video");
+  const thumbs = document.querySelectorAll("#thumb-strip img, #thumb-strip video");
 
   thumbs.forEach((thumb, i) => {
     thumb.classList.toggle("active", i === index);

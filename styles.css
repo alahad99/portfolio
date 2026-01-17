@@ -17,21 +17,27 @@ body {
 }
 
 body {
-  background: linear-gradient(
-    -45deg,
-    #0d1117,
-    #0a192f,
-    #0f2027,
-    #0a2540
-  );
+  background: linear-gradient(-45deg,
+      #0d1117,
+      #0a192f,
+      #0f2027,
+      #0a2540);
   background-size: 400% 400%;
   animation: bgMove 18s ease infinite;
 }
 
 @keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -118,6 +124,13 @@ body {
   line-height: 1.6;
   margin: 25px 0;
   color: #ccc;
+}
+
+.availability {
+  color: #00ff88;
+  font-size: 14px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
 }
 
 .buttons {
@@ -228,6 +241,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -237,6 +251,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
@@ -417,6 +432,7 @@ body {
 
 
 @keyframes bounceArrow {
+
   0%,
   20%,
   50%,
@@ -424,9 +440,11 @@ body {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-8px);
   }
+
   60% {
     transform: translateY(-3px);
   }
@@ -439,7 +457,7 @@ body {
 }
 
 .card {
- background: #161b22;
+  background: #161b22;
   padding: 16px;
   border-radius: 10px;
   text-align: center;
@@ -457,11 +475,14 @@ body {
 .card img,
 .card video {
   width: 100%;
-  height: auto;            /* image ratio maintain */
-  display: block;          /* extra gap remove */
-  object-fit: contain;     /* no cut */
+  height: auto;
+  /* image ratio maintain */
+  display: block;
+  /* extra gap remove */
+  object-fit: contain;
+  /* no cut */
   border-radius: 10px;
-  margin: 0;   
+  margin: 0;
 }
 
 .card:hover {
@@ -469,7 +490,55 @@ body {
   border: 2px solid #00ff88;
 }
 
+/* =====================
+   PROJECT TAGS (CARD)
+===================== */
 
+.project-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.project-tag {
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(0, 255, 136, 0.12);
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ffcc00;
+  color: #000;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.card .project-desc {
+  display: none;
+}
+
+#lightbox-desc {
+  display: block;
+  margin-top: 14px;
+  max-width: 70%;
+  text-align: center;
+  font-size: 17px;
+  color: #f7f7f7;
+}
 
 /* Services Section */
 .services {
@@ -549,7 +618,8 @@ body {
 
 .blog-img {
   width: 100%;
-  height: 380px;  /* services এর মতো height কমাও */
+  height: 380px;
+  /* services এর মতো height কমাও */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -560,6 +630,13 @@ body {
 .contact {
   padding: 80px 50px;
   text-align: center;
+}
+
+.contact-cta {
+  text-align: center;
+  font-size: 16px;
+  color: #d8d8d8;
+  margin-bottom: 25px;
 }
 
 .contact form {
@@ -657,7 +734,7 @@ footer p {
     margin-bottom: 30px;
   }
 
-    .navbar {
+  .navbar {
     padding: 8px 14px;
   }
 
@@ -680,19 +757,23 @@ footer p {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
- .portfolio-filter {
+  .portfolio-filter {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;     /* arrow vertical center */
+    align-items: center;
+    /* arrow vertical center */
     gap: 14px;
   }
 
   .filter-btn {
-    font-size: 18px;         /* bigger text */
-    padding: 14px 18px;      /* bigger button */
+    font-size: 18px;
+    /* bigger text */
+    padding: 14px 18px;
+    /* bigger button */
     border-radius: 22px;
-    line-height: 1;          /* vertical balance */
+    line-height: 1;
+    /* vertical balance */
     white-space: nowrap;
     transition: transform 0.65s ease, background 0.9s ease;
   }
@@ -703,9 +784,11 @@ footer p {
 
   .arrow-icon {
     display: flex;
-    align-items: center;     /* arrow middle */
+    align-items: center;
+    /* arrow middle */
     justify-content: center;
-    font-size: 24px;         /* bigger arrow */
+    font-size: 24px;
+    /* bigger arrow */
     margin-top: 0px;
     line-height: 1;
   }
@@ -723,7 +806,7 @@ footer p {
     padding: 8px 16px;
   }
 
-    .nav-links a {
+  .nav-links a {
     font-size: 14px;
   }
 
@@ -747,7 +830,7 @@ footer p {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   display: none;
   justify-content: center;
   align-items: center;
@@ -758,8 +841,13 @@ footer p {
 
 /* fade animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* MAIN VIEWER BOX */
@@ -779,15 +867,23 @@ footer p {
 
 /* animation */
 @keyframes popUp {
-  from { transform: scale(0.8); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .viewer-box img,
 .viewer-box video {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* no crop */
+  object-fit: contain;
+  /* no crop */
   border-radius: 8px;
 }
 
@@ -814,13 +910,19 @@ footer p {
   user-select: none;
   transition: 0.2s;
 }
+
 .nav-btn:hover {
   color: white;
   text-shadow: 0 0 15px #00ff88;
 }
 
-.prev-btn { left: 5%; }
-.next-btn { right: 5%; }
+.prev-btn {
+  left: 5%;
+}
+
+.next-btn {
+  right: 5%;
+}
 
 /* THUMBNAILS */
 .thumb-strip {
@@ -870,11 +972,14 @@ footer p {
 
 /* Thumbnail strip base fix */
 .thumb-strip {
-  margin-top: 14px;              /* 👈 image থেকে নিচে নামানো */
-  padding-bottom: 10px;          /* space for slider */
+  margin-top: 14px;
+  /* 👈 image থেকে নিচে নামানো */
+  padding-bottom: 10px;
+  /* space for slider */
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-gutter: stable;      /* space reserve (important) */
+  scrollbar-gutter: stable;
+  /* space reserve (important) */
 }
 
 /* -------------------------------
@@ -890,13 +995,11 @@ footer p {
 }
 
 .thumb-strip::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    270deg,
-    #1e90ff,
-    #6ecbff,
-    #00ff88,
-    #1e90ff
-  );
+  background: linear-gradient(270deg,
+      #1e90ff,
+      #6ecbff,
+      #00ff88,
+      #1e90ff);
   background-size: 400% 100%;
   border-radius: 10px;
   animation: slideBarFlow 4s ease-in-out infinite;
@@ -910,9 +1013,17 @@ footer p {
 
 /* Animation */
 @keyframes slideBarFlow {
-  0%   { background-position: 100% 50%; }
-  50%  { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 
@@ -920,12 +1031,14 @@ footer p {
 
 @media (max-width: 768px) {
 
-    .thumb-strip {
-  margin-top: 18px;              /* 👈 image থেকে নিচে নামানো */
-  padding-bottom: 10px;          /* space for slider */
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-gutter: stable;  
+  .thumb-strip {
+    margin-top: 18px;
+    /* 👈 image থেকে নিচে নামানো */
+    padding-bottom: 10px;
+    /* space for slider */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-gutter: stable;
   }
 
   /* Make slide bar more visible on mobile */
@@ -934,9 +1047,9 @@ footer p {
   }
 
   .thumb-strip::-webkit-scrollbar-track {
-  background: #0d1117;
-  border-radius: 10px;
-}
+    background: #0d1117;
+    border-radius: 10px;
+  }
 
   /* Navbar */
   .navbar {
